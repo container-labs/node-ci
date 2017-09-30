@@ -1,0 +1,18 @@
+steps:
+
+- name: 'gcr.io/cloud-builders/docker'
+  id: BuildImage
+  args: ['build', '-f', 'Dockerfile', '--tag=gcr.io/$PROJECT_ID/node-ci', '.']
+
+- name: 'gcr.io/$PROJECT_ID/node-ci'
+  id: ListNode
+  waitFor:
+  - BuildImage
+
+- name: 'gcr.io/$PROJECT_ID/node-ci'
+  id: ListGcloud
+  args: ['gcloud', 'components', 'list']
+  waitFor:
+  - BuildImage
+
+images: ['gcr.io/$PROJECT_ID/node-ci']
