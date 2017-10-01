@@ -6,6 +6,7 @@ steps:
 
 - name: 'gcr.io/$PROJECT_ID/node-ci'
   id: ListNode
+  args: ['node', '--version']
   waitFor:
   - BuildImage
 
