@@ -9,6 +9,7 @@ RUN npm install -g firebase-tools --unsafe
 RUN mkdir -p /tools/bin
 
 COPY ./cloud-sdk-deploy /tools/bin/cloud-sdk-deploy
+COPY ./firebase-deploy /tools/bin/firebase-deploy
 
 # add gcloud binary to the path
 ENV PATH="/tools/bin/:${PATH}"
