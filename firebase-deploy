@@ -5,6 +5,9 @@ set +ex
 # expected argument is environment, with FIREBASE_TOKEN set in the env
 # maybe more in the future for all the function-specific ones like timeout and memory.
 
+SOURCE_FOLDER=$1
+ENVIRONMENT=$2
+
 cd $SOURCE_FOLDER
 npm install
 npm run "deploy-${ENVIRONMENT}" --token "${FIREBASE_TOKEN}"
