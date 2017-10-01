@@ -4,7 +4,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs build-essential
 
 # overload this a little and add the firebase-tools package
-RUN npm install -g firebase-tools
+RUN npm install -g firebase-tools --unsafe
 
 COPY ./sdk-deploy.sh .
 
