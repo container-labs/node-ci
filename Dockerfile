@@ -6,6 +6,11 @@ RUN apt-get install -y nodejs build-essential
 # overload this a little and add the firebase-tools package
 RUN npm install -g firebase-tools --unsafe
 
-COPY ./sdk-deploy.sh .
+RUN mkdir -p /tools/bin
 
-CMD ["./sdk-deploy.sh"]
+COPY ./cloud-sdk-deploy /tools/bin/cloud-sdk-deploy
+
+# add gcloud binary to the path
+ENV PATH="/tools/bin/:${PATH}"
+
+CMD ["cloud-sdk-deploy"]
