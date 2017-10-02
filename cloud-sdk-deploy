@@ -9,13 +9,6 @@ SOURCE_FOLDER=$1
 NODE_ENV=$2
 FUNCTION_NAME=$3
 
-# to switch to where the script is being called from
-# parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-# cd "$parent_path"
-
-echo "pwd is"
-echo `pwd`
-
 # transpile
 cd $SOURCE_FOLDER
 echo "transpiling $SOURCE_FOLDER for $NODE_ENV environment"
