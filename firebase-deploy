@@ -10,6 +10,8 @@ ENVIRONMENT=$2
 
 # to switch to where the script is being called from
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+echo "parent_path is ${parent_path}"
+echo `pwd`
 cd "$parent_path"
 
 cd $SOURCE_FOLDER
