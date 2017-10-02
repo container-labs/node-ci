@@ -11,7 +11,7 @@ RUN mkdir -p /tools/bin
 COPY ./cloud-sdk-deploy /tools/bin/cloud-sdk-deploy
 COPY ./firebase-deploy /tools/bin/firebase-deploy
 
-# add gcloud binary to the path
+# add gcloud and firebase executables to the path
 ENV PATH="/tools/bin/:${PATH}"
 
 CMD ["cloud-sdk-deploy"]
