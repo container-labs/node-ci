@@ -16,6 +16,7 @@ RUN npm install -g firebase-tools --unsafe
 
 RUN mkdir -p /tools/bin
 
+COPY ./cache /tools/bin/cache
 COPY ./cloud-sdk-deploy /tools/bin/cloud-sdk-deploy
 COPY ./firebase-deploy /tools/bin/firebase-deploy
 

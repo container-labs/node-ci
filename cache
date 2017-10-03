@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set +ex
+
+# expected arguments are
+# folder environment function name => then the rest
+
+SOURCE_FOLDER=$1
+
+cd $SOURCE_FOLDER
+npm install
+npm prune
