@@ -20,6 +20,8 @@ npm install
 # had to downgrade to npm@4 to get out of it
 # npm prune
 
+# adding this back because now we're going to try to use build images as volumes.
+npm prune
 npm run "package-functions-${NODE_ENV}"
 
 # TODO: create the source contexts
