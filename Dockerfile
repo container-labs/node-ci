@@ -11,8 +11,12 @@ RUN npm install npm@4
 RUN rm -rf /usr/lib/node_modules
 RUN mv node_modules /usr/lib/
 
+# need this to build after install
+RUN npm -g install node-pre-gyp
+
 # overload this a little and add the firebase-tools package
 RUN npm install -g firebase-tools --unsafe
+
 
 RUN mkdir -p /tools/bin
 
