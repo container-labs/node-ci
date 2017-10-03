@@ -13,6 +13,8 @@ FUNCTION_NAME=$3
 cd $SOURCE_FOLDER
 echo "transpiling $SOURCE_FOLDER for $NODE_ENV environment"
 npm install
+# have to set this so prune doesn't fuck things up
+npm config delete depth
 # in node > 6 we don't have to do this
 npm prune
 npm run "package-functions-${NODE_ENV}"
