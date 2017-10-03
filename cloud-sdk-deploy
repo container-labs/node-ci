@@ -13,6 +13,7 @@ FUNCTION_NAME=$3
 cd $SOURCE_FOLDER
 echo "transpiling $SOURCE_FOLDER for $NODE_ENV environment"
 npm install
+echo 'end npm install'
 
 # total misfire here, we don't need to prune the packaker, we upload the json file and cloud functions does that.
 # make sure there are no dupes slash we have to do this for some packages
