@@ -3,11 +3,11 @@ FROM gcr.io/project-charlotte/google-sdk-ci:latest
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs build-essential
 
-# ugh
+# ugh, so much ugh
 # https://github.com/npm/npm/issues/17781
 # installing locally because
 # https://github.com/npm/npm/issues/15558
-RUN npm install npm@5.2
+RUN npm install npm@4
 RUN rm -rf /usr/lib/node_modules
 RUN mv node_modules /usr/lib/
 
