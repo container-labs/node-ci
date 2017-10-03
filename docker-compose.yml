@@ -2,4 +2,6 @@ version: '2'
 
 services:
   node:
-    build: ./
+    build:
+      context: ./
+      dockerfile: Dockerfile.local

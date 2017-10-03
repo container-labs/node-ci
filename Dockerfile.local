@@ -1,5 +1,6 @@
-# FROM gcr.io/project-charlotte/google-sdk-ci:latest
 FROM debian:jessie
+
+RUN apt-get update -y && apt-get install curl -y
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs build-essential
