@@ -31,6 +31,6 @@ npm run "package-functions-${NODE_ENV}"
 # gcloud debug source gen-repo-info-file --output-directory functions
 
 # deploy
-DEPLOY_COMMAND="gcloud beta functions deploy ${FUNCTION_NAME}-${NODE_ENV} ${@:4} --stage-bucket test-charlotte"
+DEPLOY_COMMAND="gcloud beta functions deploy ${FUNCTION_NAME}-${NODE_ENV} ${@:4}"
 echo "deploying $DEPLOY_COMMAND"
 cd functions && $DEPLOY_COMMAND
