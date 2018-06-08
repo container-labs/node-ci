@@ -7,7 +7,7 @@ RUN apt-get install -y nodejs build-essential
 # https://github.com/npm/npm/issues/17781
 # installing locally because
 # https://github.com/npm/npm/issues/15558
-RUN npm install npm@5.4
+RUN npm install npm@6.1
 RUN rm -rf /usr/lib/node_modules
 RUN mv node_modules /usr/lib/
 
