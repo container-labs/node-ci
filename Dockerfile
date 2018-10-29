@@ -14,8 +14,8 @@ RUN mv node_modules /usr/lib/
 # need this to build after install
 RUN npm -g install node-pre-gyp
 
-# 2018-8-11
-RUN echo new tools
+# 2018-10-28
+RUN echo new tools 1028
 # overload this a little and add the firebase-tools package
 RUN npm install -g firebase-tools --unsafe
 
