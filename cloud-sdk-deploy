@@ -12,7 +12,7 @@ FUNCTION_NAME=$3
 # transpile
 cd $SOURCE_FOLDER
 echo "transpiling $SOURCE_FOLDER for $NODE_ENV environment"
-npm install
+yarn install
 echo 'end npm install'
 
 # total misfire here, we don't need to prune the packaker, we upload the json file and cloud functions does that.
@@ -21,7 +21,7 @@ echo 'end npm install'
 # had to downgrade to npm@4 to get out of it
 # npm prune
 
-npm run "package-functions-${NODE_ENV}"
+yarn run "package-functions-${NODE_ENV}"
 
 # TODO: create the source contexts
 # this doesn't work right now because we'd need to
