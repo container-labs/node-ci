@@ -1,7 +1,7 @@
 FROM containerlabs/google-sdk-ci:latest
 
 RUN echo new node 1210
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs build-essential
 
 # ugh, so much ugh
