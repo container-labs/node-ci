@@ -15,10 +15,10 @@ RUN mv node_modules /usr/lib/
 # need this to build after install
 RUN npm -g install node-pre-gyp yarn
 
-# 2018-10-28
-RUN echo new tools 1210
+# 2020-02-06
+RUN echo new tools 2020-02-06
 # overload this a little and add the firebase-tools package
-RUN yarn global add firebase-tools --unsafe
+RUN yarn global add firebase-tools@7.12.1 --unsafe
 RUN yarn global add  @babel/cli@7.2.0 @babel/core@7.2.0
 
 RUN mkdir -p /tools/bin
