@@ -19,6 +19,7 @@ RUN npm -g install node-pre-gyp yarn
 RUN echo new tools 2020-02-06
 # build this to pull in the devDeps package
 RUN yarn global add firebase-tools@8.11.2 --unsafe
+RUN yarn global add @sentry/cli@1.58.0
 #RUN yarn global add  @babel/cli@7.2.0 @babel/core@7.2.0
 
 RUN mkdir -p /tools/bin
