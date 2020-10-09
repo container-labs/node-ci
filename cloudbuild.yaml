@@ -1,8 +1,10 @@
 steps:
 
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/kaniko-project/executor:latest'
   id: BuildImage
-  args: ['build', '-f', 'Dockerfile', '--tag=gcr.io/$PROJECT_ID/node-ci', '.']
+  args:
+    - --destination=gcr.io/$PROJECT_ID/node-ci
+    - --cache=true
 
 - name: 'gcr.io/$PROJECT_ID/node-ci'
   id: ListNode
